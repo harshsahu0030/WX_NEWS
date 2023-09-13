@@ -18,7 +18,7 @@ const News = () => {
 
   return (
     <div className="news">
-      <MetaData title={`${category.toLocaleUpperCase()} -- NEWS`} />
+      <MetaData title={`${category.toLocaleUpperCase()} -- WX_NEWS`} />
       <NewsCategory category={category} setCategory={setCategory} />
 
       {loading ? (
