@@ -1,0 +1,22 @@
+.newsCategory {
+  height: 10vh;
+  width: 95%;
+  position: sticky;
+  margin: 0 auto;
+  top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 50px;
+  z-index: 10;
+  background-color: #c1c1c1;
+}
+
+@media screen and (max-width: 600px) {
+  .newsCategory {
+    min-height: 10vh;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,83 @@
+.weatherCard {
+  height: 14vmax;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2);
+  padding: 1vmax 2vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dividerVertical {
+  flex-flow: column;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  height: 12vmax;
+  width: 0;
+  margin: 0 2vmax;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vmax;
+}
+
+.left > h1 {
+  font-size: 3vmax;
+  font-weight: 900;
+}
+
+.left > h2 {
+  font-size: 1.5vmax;
+  font-weight: 400;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.left > h3 {
+  font-size: 0.8vmax;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.right {
+  display: flex;
+}
+
+.right > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1vmax;
+  font-size: 1vmax;
+}
+
+.right > ul > li {
+  color: rgba(0, 0, 0, 0.5);
+  list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+  .weatherCard {
+    height: 25vmax;
+  }
+
+  .left > h1 {
+    font-size: 5vmax;
+    font-weight: 900;
+  }
+
+  .left > h2 {
+    font-size: 3vmax;
+  }
+
+  .left > h3 {
+    font-size: 1.2vmax;
+  }
+
+  .right > ul {
+    font-size: 2vmax;
+  }
+}

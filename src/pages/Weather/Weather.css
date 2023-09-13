@@ -1,0 +1,228 @@
+.weather {
+  height: calc(100vh - 10vh);
+  width: 100%;
+  display: flex;
+}
+
+.leftSide {
+  color: #fefefe;
+  width: 65%;
+  border-radius: 0 40px 40px 0;
+  display: flex;
+  flex-direction: column;
+  padding: 3vmax 5vmax;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.pexels.com/photos/5117913/pexels-photo-5117913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.leftTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+}
+
+.leftTop > h1 {
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.locationBox {
+  display: flex;
+  align-items: center;
+  padding: 0.5vmax 1vmax;
+  border-radius: 10px;
+  background: rgba(128, 128, 128, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  gap: 0.7vmax;
+}
+
+.location p:nth-child(1) {
+  font-size: 0.8vmax;
+}
+
+.leftBottom {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vmax;
+}
+
+.leftBottom > h2 {
+  font-size: 2.5vmax;
+  font-weight: 400;
+  text-align: center;
+}
+
+.dividerHorizontal {
+  border: 3px solid #fefefe;
+  width: 10vmax;
+  border-radius: 10px;
+  margin: 2vmax 0;
+}
+
+.searchInput {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchBtn {
+  position: absolute;
+  right: 1vmax;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border: none;
+  background-color: transparent;
+  color: #fefefe;
+}
+.searchBtn:hover {
+  transform: scale(1.2);
+}
+
+.leftInput {
+  color: #fefefe;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.5vmax 1vmax;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1.3vmax;
+  outline: none;
+}
+
+.leftInput::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5vmax 1vmax;
+  border-radius: 10px;
+  background: rgba(128, 128, 128, 0.2);
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  color: #fefefe;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+.rightSide {
+  height: 100%;
+  width: 35%;
+  padding: 1vmax 2vmax;
+  display: flex;
+  flex-direction: column;
+  gap: 1vmax;
+}
+
+.rightSide > h1 {
+  font-size: 3.5vmax;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5vmax 2vmax;
+  border-radius: 20px;
+}
+
+.rightSide > h2 {
+  font-size: 2.5vmax;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5vmax 2vmax;
+  border-radius: 20px;
+}
+
+.rightSide .TempCardCss {
+  height: 12vmax;
+  display: flex;
+  overflow-x: scroll;
+  align-self: center;
+  justify-content: space-evenly;
+  overflow-x: scroll;
+  width: 100%;
+  position: relative;
+  gap: 1vmax;
+}
+
+/* .rightSide .TempCardCss::after {
+  content: "";
+  height: 100%;
+  width: 10vmax;
+  position: absolute;
+  right: 0;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.7)
+  );
+} */
+
+@media screen and (max-width: 600px) {
+  .weather {
+    flex-direction: column;
+  }
+
+  .leftSide {
+    width: 100%;
+    min-height: 60vh;
+    border-radius: 0;
+  }
+
+  .leftTop > h1 {
+    font-size: 2vmax;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  .location p:nth-child(1) {
+    font-size: 0.8vmax;
+  }
+
+  .location p:nth-child(2) {
+    font-size: 1vmax;
+  }
+
+  .searchInput {
+    width: 80%;
+  }
+
+  .leftInput {
+    padding: 2vmax 4vmax 2vmax 2vmax;
+  }
+
+  .rightSide {
+    width: 100%;
+    gap: 4vmax;
+    padding: 3vmax 2vmax;
+    padding-bottom: 5vmax;
+  }
+
+  .rightSide > h1 {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1vmax 2vmax;
+  }
+
+  .rightSide > h2 {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1vmax 2vmax;
+  }
+
+  .rightSide .TempCardCss {
+    min-height: 14vmax;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: none;
+  }
+}
